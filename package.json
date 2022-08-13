@@ -1,12 +1,19 @@
 {
-  "name": "node-avvvatars",
+  "name": "@connect3world/node-avvvatars",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/connect3world"
+  },
   "version": "0.0.1",
   "description": "Generates unique placeholder avatars with either characters or shapes for your node project",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev",
-    "build": "tsdx build"
+    "build": "rollup -c"
   },
   "author": "John Cido",
   "license": "MIT",
@@ -16,7 +23,18 @@
     "node",
     "random avatar"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connect3world/node-avvvatars.git"
+  },
+  "bugs": {
+    "url": "https://github.com/connect3world/node-avvvatars/issues"
+  },
+  "homepage": "https://github.com/connect3world/node-avvvatars",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.4",
     "@types/node": "18.7.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
@@ -26,10 +44,14 @@
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tsdx": "^0.14.1",
+    "rollup": "^2.77.3",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.7.4"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@napi-rs/canvas": "^0.1.26",
     "transformation-matrix": "^2.12.0"
   }
