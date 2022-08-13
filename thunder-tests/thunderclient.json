@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "45180119-7ad1-48c1-950d-8a2e30ec57b6",
+    "colId": "b81f5b37-77e7-483b-84ba-0d285b7f910c",
+    "containerId": "",
+    "name": "Avvvatar",
+    "url": "localhost:3000/api?value=avvatars&size=256",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-08-13T15:26:31.583Z",
+    "modified": "2022-08-13T15:26:31.583Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "value",
+        "value": "avvatars",
+        "isPath": false
+      },
+      {
+        "name": "size",
+        "value": "256",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]

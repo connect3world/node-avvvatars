@@ -1,5 +1,5 @@
-import MersenneTwister from './mersenne_twister'
 import AleaGen from './alea'
+import { MersenneTwister } from './mersenne-twister'
 
 interface range {
   min: number
@@ -18,7 +18,6 @@ function minMax(opts: MinMax){
   const { random, min, max } = opts
   return Math.floor(random * (max - min + 1) + min);
 }
-
 
 export default function randomNumber(opts: GenerateRandom){
   const { value, min, max } = opts
